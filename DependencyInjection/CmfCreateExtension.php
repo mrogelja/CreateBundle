@@ -77,6 +77,7 @@ class CmfCreateExtension extends Extension
             $this->loadPhpcr($config['persistence']['phpcr'], $loader, $container);
             $hasMapper = true;
         } else {
+            $loader->load('persistence-orm.xml');
             // TODO: we should leverage the mediabundle here and not depend on phpcr
             $container->setParameter($this->getAlias() . '.image_enabled', false);
         }
