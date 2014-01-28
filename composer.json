@@ -14,13 +14,19 @@
             "homepage": "https://github.com/symfony-cmf/CreateBundle/contributors"
         }
     ],
+    "repositories": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/mrogelja/createphp.git"
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
         "symfony/framework-bundle": "~2.1",
         "symfony/assetic-bundle": "~2.1",
         "friendsofsymfony/rest-bundle": "~1.0",
         "jms/serializer-bundle": ">=0.12,<0.14",
-        "midgard/createphp": "0.9.*"
+        "mrogelja/createphp": "0.9.*"
     },
     "require-dev": {
         "symfony-cmf/testing": "1.1.*"
