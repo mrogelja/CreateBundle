@@ -6,12 +6,18 @@
 
     <parameters>
         <parameter key="cmf_create.propel_mapper.class">Midgard\CreatePHP\Mapper\PropelMapper</parameter>
+        <parameter key="cmf_create.doctrine_mongodb_mapper.class">Midgard\CreatePHP\Mapper\DoctrineMongoDbMapper</parameter>
     </parameters>
 
     <services>
 
         <service id="cmf_create.propel_mapper" class="%cmf_create.propel_mapper.class%" public="false">
             <argument>%cmf_create.map%</argument>
+        </service>
+
+        <service id="cmf_create.doctrine_mongodb_mapper" class="%cmf_create.doctrine_mongodb_mapper.class%" public="false">
+            <argument>%cmf_create.map%</argument>
+            <argument type="service" id="doctrine_mongodb"/>
         </service>
 
     </services>
